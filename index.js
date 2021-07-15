@@ -136,7 +136,7 @@ function getReviewByIndex(array, index) {
 
 }
 
-
+console.log('task 6', getReviewByIndex(reviews, 0));
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -152,11 +152,9 @@ Use the getLastReview function below to do the following:
 
 // array as a param 
 function getLastReview(array) {
-  for(let i = 0; i < array[array.length - 1]; i++){
-    if (array[array.length - 1]){
-      return `${array.name} gave the restaurant a ${array.rating} star review, and their feedback was: ${array.feedback}`;
-    }
-  }
+
+  return `${array[array.length - 1].name} gave the restaurant a ${array[array.length - 1].rating} star review, and their feedback was: ${array[array.length - 1].feedback}`;
+
 } 
 
 console.log('task 7', getLastReview(reviews));
