@@ -14,10 +14,13 @@ The function should:
   
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
-
-function createMenuItem(/*Your code here*/){
+//using the function below to return an object with the keys name, price, category
+function createMenuItem(name, price, category){
     /*Your code here*/
+    return {name, price, category};
 }
+
+console.log('task 1a', createMenuItem('taco', 1.50, 'SoulFood'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -29,7 +32,13 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
+createMenuItem('taco', 1.50, 'All-Day');
+createMenuItem('burger', 2.50, 'Lunch');
+createMenuItem('nachos', 3.50, 'Lunch');
 
+console.log('task 1b');
+
+//invoking the function ~ this is not tested
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the 
@@ -46,10 +55,21 @@ Using the burger object below do the following:
 const burger = {
   name: "Burger", 
   price: 18, 
-  category: "Lunch", 
-  
+  category: "Lunch",
+  discount: function(customer){
+    if (customer === 'teacher'){
+      return this.price - (this.price * 0.25);
+    }
+    else if (customer === 'student'){
+      return this.price - (this.price * 0.25);
+    }
+    else if (customer === 'public'){
+      return this.price - (this.price * 0.1);
+    }
+  }
 }
 
+console.log('task 2', burger.discount('teacher'));
 
 
 ///////////////Reviews (MVP)///////////////////
@@ -68,7 +88,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-
+// this is not being tested
 
 
 
@@ -79,7 +99,7 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
 */
 reviews[7].feedback = 'this place is chill with really cool people, great for getting work done on weekdays';
 console.log(reviews);
-
+//not being tested
 
 
 
@@ -92,7 +112,10 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 
-function addReview(/*Your Code Here */){
+function addReview(array, name, rating, feedback){
+  // create an object
+  // const object = {name, rating, review};
+  // push that object to the array
   /*Your Code Here */
 }
 
@@ -125,7 +148,7 @@ Use the getLastReview function below to do the following:
   For example: getLastReview(reviews) would return: "Reyna gave the restaurant a 3.5 star review, and their feedback was: this place is chill with really cool people, great for getting work done on weekdays".
 */
 
-
+// array as a param 
 function getLastReview(/*Your code here*/) {
   /*Your code here*/
 } 
